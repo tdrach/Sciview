@@ -21,6 +21,7 @@ app.configure(function(){
   app.use(express.static(path.join(__dirname, 'public')));
   app.use(express.urlencoded());
   app.use(express.json);
+  app.locals.cache = "memory"
 });
 
 app.configure('development', function(){

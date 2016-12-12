@@ -1,0 +1,167 @@
+.overlay {
+  @extend %overlay;
+}
+
+.upload {
+  @extend %modal;
+} 
+
+.upload__icon {
+  width: $gamma;
+  opacity: 0.3;
+}
+
+.upload__header {
+  @include span-columns(12);
+  @include pad($gamma/2);
+  background-color: rgba($interface_color, 0.05);
+}
+
+.upload__title {
+  @include pad($gamma/2);
+  @include span-columns(8);
+  &::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: $gamma;
+    height: $normal;
+    background: url('../img/upload.svg') no-repeat center center;
+    background-size: $normal;
+    margin: 0 $normal;
+    opacity: 0.3;
+  }
+}
+
+.upload__header-actions {
+  @include span-columns(4);
+  text-align: right;
+}
+
+.upload__action {
+  @extend %navigator-action;
+}
+
+.upload__cancel {
+  @extend %modal-cancel;
+}
+
+.upload__list {
+  @extend %ul-reset;
+  @include span-columns(12);
+}
+
+.upload__name {
+  @include span-columns(6);
+  @include pad($baby 0);
+  font-family: $mono_font_family;
+}
+
+.upload__begin {
+  @extend %navigator-action;
+}
+
+.upload__actions {
+  @include span-columns(6);
+}
+
+.upload__progress {
+  @include span-columns(8);
+  @include shift(4);
+}
+
+.upload__item {
+  @include span-columns(12);
+  @include pad($baby $gamma);
+  @include rem(font-size, $normal);
+  &:nth-child(even) {
+    background-color: darken($background_color, 4%);
+  }
+}
+
+.upload__info {
+  opacity: 0.7;
+}
+
+.upload__stop-upload {
+  @extend %input-reset;
+  padding: 0;
+  border: 0;
+  opacity: 0.5;
+  height: $normal;
+  float: right;
+  background-color: transparent;
+
+  &:hover {
+    border: 0;
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  &:active,
+  &:focus {
+    border: 0;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: $normal;
+    height: $normal;
+    background: url('../img/x.svg') no-repeat center;
+    background-size: $baby;
+  }
+}
+
+.upload__uploading {
+  @include pad($normal 0);
+  @include span-columns(12);
+}
+
+.upload__ready {
+  @include span-columns(12);
+}
+
+.upload__loading {
+  height: $baby;
+  margin-top: 2px;
+  @include span-columns(8);
+}
+
+.upload__null {
+  @include span-columns(12);
+  @extend %small-caps;
+  @include rem(font-size, $baby);
+  text-align: center;
+  margin: $alpha auto;
+  opacity: 0.5;
+  top: $beta*2;
+  @include vp(transform, translateY(-50%));
+  // &::before {
+  //   content: '';
+  //   display: block;
+  //   width: $gamma;
+  //   height: $gamma;
+  //   margin: $gamma auto;
+  //   opacity: 0.7;
+  //   background: url('../img/upload.svg') no-repeat center;
+  //   background-size: $normal;
+  // }
+}
+
+.upload__prompt {
+  @include pad($normal);
+  // @include rem(margin-top: $normal);
+  border: 2px dashed rgba($white, 0.3);
+}
+
+.upload__finished {
+  @extend %navigator-action;
+  @include span-columns(12);
+  bottom: 0;
+  position: absolute;
+}
+
+
+
+

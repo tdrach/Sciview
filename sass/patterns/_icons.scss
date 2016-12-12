@@ -1,0 +1,6 @@
+%icon-data-set {
+  &::before {
+    @extend %icon-font;
+    content: '\e600';
+  }
+}

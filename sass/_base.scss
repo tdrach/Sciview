@@ -1,0 +1,57 @@
+* {
+    position: relative;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: $font_size;
+    min-height: 100%;
+    min-width: 100%;
+
+    background-color: $background_color;
+    color: $font_color;
+    font-family: $primary_font_family;
+    font-weight: 300;
+    text-align: left;
+
+    @if $interface_style == dark {
+        background-repeat: no-repeat;
+        @extend %gradient-1;
+    }
+
+    -webkit-backface-visibility: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: $font_color;
+
+    &:hover {
+        border-bottom: 2px solid $interface_color;        
+    }
+}
+
+h1, h2, h3, 
+h4, h5, h6 {
+    font-size: $normal;
+    font-weight: 400;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Sciview';
+    src: url('../fonts/icomoon.eot');
+    src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

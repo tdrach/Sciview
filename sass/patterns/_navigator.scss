@@ -1,0 +1,31 @@
+%navigator-action {
+  padding: $baby $gamma;
+  color: $font_color;
+  background-color: rgba($white, 0.05);
+  box-shadow: none;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 2px $highlight_color;
+  }
+
+  &:active {
+    outline: none;
+    background-color: $highlight_color;
+    color: $interface_color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+%navigator-heading {
+  font-size: $normal;
+  font-weight: 300;
+  font_color: rgba($font_color, 0.5);
+  border-bottom: 1px solid rgba($white, 0.1);
+  padding: $normal 0;
+}

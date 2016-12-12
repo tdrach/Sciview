@@ -1,0 +1,19 @@
+$default_family: web-font !default;
+$default_path: web-font !default;
+$default_weight: normal !default;
+$default_style: normal !default;
+
+// Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+
+@mixin font-face($font_family: $default_family, $file_path: $default_path, $weight: $default_weight, $style: $default_style ) {
+  @font-face {
+    font-family: $font_family;
+    font-weight: $weight;
+    font-style: $style;
+    src: url('#{$fontDir}#{$file_path}.eot');
+    src: url('#{$fontDir}#{$file_path}.eot?#iefix')               format('embedded-opentype'),
+         url('#{$fontDir}#{$file_path}.woff')                     format('woff'),
+         url('#{$fontDir}#{$file_path}.ttf')                      format('truetype'),
+         url('#{$fontDir}#{$file_path}.svg##{$font_family}')      format('svg');
+  }
+}

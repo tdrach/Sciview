@@ -1,0 +1,45 @@
+<header class="discuss__header">
+  <h2 class="discuss__title">Activity</h2>
+  <div class="discuss__notifications">
+    <span class="discuss__notifications-value">3</span><span class="discuss__notifications-unread"> unread observations.</span><span class="discuss__notifications-clear">Mark as read</span>
+  </div>
+  </span>
+  </div>
+</header>
+
+<ul class="discuss__feed">
+  <li class="observation" ng-if="$state.current.name === 'data-sets.single.discuss.point'" ui-view>
+  </li>
+  <li class="observation"
+      ng-repeat="observation in observations">
+
+      <header     class="observation__header">
+        <span     class="observation__header-data-set"
+                  ng-bind="observation.data_set">
+        </span>          
+        <span     class="observation__header-data-point"
+                  ng-bind="observation.data_point">
+        </span>
+      </header>
+
+      <section    class="observation__main">
+        <section  class="observation__sidebar">
+          <span   class="observation__author-photo"
+                  style="background-image: url('{{observation.img}}')">
+          </span>
+        </section>
+        <section  class="observation__main-info">
+          <span   class="observation__author"
+                  ng-bind="observation.author">
+          </span>
+          <span   class="observation__created"
+                  ng-bind="observation.created | date:'shortTime'">
+          </span>
+          <p      class="observation__info"
+                  ng-bind="observation.observation">
+          </p>        
+        </section>
+      </section>
+
+  </li> 
+</ul>

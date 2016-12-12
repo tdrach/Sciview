@@ -1,0 +1,51 @@
+// Modules
+// - Views
+// -- Data Sets
+
+.data-sets {
+  @include span-columns(12);
+  position: fixed;
+}
+
+.data-sets__list {
+  @extend %ul-reset;
+  @extend %monospaced-style;
+}
+
+.data-sets__item {
+  float: left;
+  display: inline-block;
+  background-color: rgba($interface_color, 0.025);
+  color: rgba($font_color, 0.3);
+  padding: $normal $beta;
+
+  &:hover {
+    background-color: rgba($interface_color, 0.05);
+    color: rgba($font_color, 0.7);
+    cursor: pointer;
+  }
+}
+
+.data-set {
+  height: 100%;
+  width: 100%;
+  top: $gamma*3;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: relative;
+}
+
+.data-set__current {
+  @include span-columns(12);
+  position: absolute;
+  top: 0;
+  bottom: $alpha*3;
+}
+
+
+
+
+
+
+

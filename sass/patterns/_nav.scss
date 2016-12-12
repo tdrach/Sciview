@@ -1,0 +1,18 @@
+%nav-items {
+  display: inline-block;
+  font-size: $gamma;
+  margin: 0 $beta 0 $gamma;
+  color: rgba($white, 0.3);
+  &::before {
+    @extend %icon-font;
+    color: rgba($font_color, 0.3);
+    font-size: $normal;
+    position: absolute;
+    bottom: .2em;
+    left: -2em;
+  }
+  &:hover {
+    color: $font_color;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,91 @@
+.share {
+  @extend %modal;
+  text-align: center;
+}
+
+.share__action {
+  @include pad($baby $beta);
+  @include rem(font-size, $normal);
+  @include rem(padding-left, $alpha);
+  display: block;
+  position: absolute;
+  z-index: $z-index-neutral;
+  height: $alpha;
+  right: $alpha;
+  top: -$alpha;
+  background-color: rgba($white, 0.01);
+}
+
+.share__action-cta {
+  position: relative;
+  opacity: 0.3;
+  @include vp(transition, opacity 0.2s ease);
+
+    &::before {
+      width: $gamma;
+      height: $normal;
+      content: '';
+      display: inline-block;
+      background: url('../img/share.svg') no-repeat center;
+      background-size: $normal;
+      position: absolute;
+      left: -$beta;
+      bottom: .25em;
+      // top: 0;
+      // right: 2em;
+    }
+
+    &:hover {
+      @include vp(transition, opacity 0.2s ease);
+      opacity: 1;
+      cursor: pointer;
+    }
+}
+
+.share__cancel {
+  @extend %modal-cancel;
+}
+
+.share__icon {
+  @include span-columns(12);
+  @extend %icon-data-set;
+  text-align: center;
+  margin: 8% auto;
+  opacity: 0.2;
+
+  &::before {
+    font-size: 2em;
+  }
+}
+
+.share__info {
+  // text-align: center;
+  @include span-columns(12);
+}
+
+.share__aside {
+  @include pad(0 $alpha);
+  @include span-columns(12);
+  // text-align: center;
+  opacity: 0.3;
+  margin: auto;
+}
+
+.share__link {
+  @extend %input-reset;
+  margin: 1em auto;
+}
+
+.share__finished {
+  display: block;
+  @extend %navigator-action;
+  margin: 1em auto;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+// Modules
+// - Views
+// -- Navigator
+
+.navigator {
+  @extend %view-layout;
+  background-color: rgba($interface_color, 0.02);
+}
+
+.navigator__toolbar {
+  @include span-columns(12);
+  @include pad($gamma);
+  background-color: rgba($interface_color, 0.02);
+}
+
+.navigator__content {
+  @include span-columns(12);
+}
+
+.navigator__search {
+  @include span-columns(4);
+  @extend %input-reset;
+}   
+
+.navigator__toolbar-actions {
+  @include span-columns(6);
+  @include shift(2);
+  text-align: right;
+}
+
+.navigator__action-custom-data-set {
+  @extend %navigator-action;
+}
+.navigator__action-upload-tdm {
+  @extend %navigator-action;
+}
+.navigator__action-upload-tdms {
+  @extend %navigator-action;
+}
+
+.navigator__table {
+  @include pad($gamma);
+  @include span-columns(12);
+}
+
+// - Headings
+
+.navigator__table-heading-title {
+  @extend %navigator-heading;
+  @include span-columns(3);
+}
+
+.navigator__table-heading-created {
+  @extend %navigator-heading;
+  @include span-columns(1);
+}
+
+.navigator__table-heading-modified {
+  @extend %navigator-heading;
+  @include span-columns(1);
+}
+
+.navigator__table-heading-size {
+  @extend %navigator-heading;
+  @include span-columns(1);
+}
+
+.navigator__table-heading-length {
+  @extend %navigator-heading;
+  @include span-columns(1);
+}
+
+.navigator__table-heading-info {
+  @extend %navigator-heading;
+  @include span-columns(4);
+}
+
+.navigator__table-heading-actions {
+  @extend %navigator-heading;
+  @include span-columns(1);
+}

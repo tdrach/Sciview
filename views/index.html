@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="app">
+    <head>
+        <title>Sciview UI</title>
+        <!-- compiled sass -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- devices -->
+        <meta name = "viewport" content = "width = device-width">
+        <meta name = "viewport" content = "initial-scale = 1.0">
+        <script type="text/javascript" src="//use.typekit.net/jla8qzw.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    </head>
+    <body>
+        <!-- navigation -->
+        <nav    class="nav" 
+                ng-controller="NavController"
+                ng-include="'partials/nav.html'">
+        </nav>
+        <!-- main view -->
+        <section class="main" ui-view>
+        </section>
+
+        <!-- Javascript -->
+            <!-- angular -->
+            <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular-cookies.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular-animate.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular-route.min.js"></script>
+
+            <!-- homegrown -->
+            <script src="/javascripts/app.js"></script>
+            <!-- homegrown - controllers -->
+            <script src="/javascripts/controllers/NavController.js"></script>
+            <script src="/javascripts/controllers/NavigatorController.js"></script>
+            <script src="/javascripts/controllers/ViewController.js"></script>
+            <script src="/javascripts/controllers/DataSetController.js"></script>
+            <script src="/javascripts/controllers/DiscussController.js"></script>
+            <script src="/javascripts/controllers/DiscussPointController.js"></script>
+            <script src="/javascripts/controllers/ShareController.js"></script>
+            <script src="/javascripts/controllers/ToolController.js"></script>
+            <script src="/javascripts/controllers/UploadController.js"></script>
+            <!-- homegrown - services -->
+            <script src="/javascripts/services/DataSets.js"></script>
+            <script src="/javascripts/services/Sources.js"></script>
+            <script src="/javascripts/services/Observations.js"></script>
+
+    </body>
+</html>

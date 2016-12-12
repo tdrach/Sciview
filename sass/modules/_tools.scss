@@ -1,0 +1,53 @@
+%tool-block {
+  @include span-columns(3);
+  @include pad($gamma);
+  @include omega;
+  @include rem(font-size, $normal);
+  background-color: rgba(darken($background_color, 10%), 0.2);
+  font-family: $mono_font_family;
+}
+
+.tools {
+  background-color: rgba(darken($background_color, 3%), 0.8);
+  // @include pad($baby 0);
+  @include span-columns(12);
+  position: fixed;
+  bottom: 0;
+}
+
+.tools__readout {
+  @extend %tool-block;
+}
+
+.tools__readout-channel {
+  @include span-columns(8);
+}
+
+.tools__readout-category {
+  @include span-columns(8);
+  color: rgba($font_color, 0.5);
+}
+
+.tools__readout-value {
+  @include span-columns(4);
+  @include omega;
+}
+
+.tools__readout-unit {
+  @include span-columns(4);
+  color: rgba($font_color, 0.5);
+}
+
+.tools__time {
+  @extend %tool-block;
+  @include span-columns(2);
+}
+
+.tools__time-value {
+  @include span-columns(12);
+}
+
+.tools__time-unit {
+  @include span-columns(12);
+  color: rgba($font_color, 0.5);
+}

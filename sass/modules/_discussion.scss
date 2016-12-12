@@ -1,0 +1,82 @@
+.discussion {
+  // @include span-columns(6);
+  // @include shift(6);
+  // height: 100%;
+  position: absolute;
+  z-index: 4;
+  width: $alpha;
+  height: $alpha;
+  right: $alpha;
+}
+
+%discussion__tab {
+  position: absolute;
+  top: -$alpha;
+  right: -$alpha;
+  background-color: rgba($interface_color, 0.03);
+  width: $alpha;
+  height: $alpha;
+
+  &::before {
+    @extend %hover-ready;
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 50%;
+    @include vp(transform, translateY(-50%));  
+  }
+
+  &:hover {
+    &::before {
+      @extend %hover-go;
+    }
+  }
+}
+
+.discussion__closed {
+  position: absolute;
+  width: $alpha;
+  right: 0;
+}
+
+.discussion__cta-open {
+  @extend %discussion__tab;
+  &::before {
+    content: url('../img/discussion.svg');
+  }
+}
+
+.discussion__tab--notification {
+  display: block;
+  position: absolute;
+  right: -$alpha+$baby;
+  top: -$alpha + $baby;
+  border-radius: .5rem;
+  width: .5rem;
+  height: .5rem;
+  background-color: $notification_color;
+}
+
+.discussion__interface {
+  @include span-columns(12);
+  position: absolute;
+  right: 0;
+  // height: 100%;
+  background-color: rgba(darken($background_color, 5%), 0.9);
+}
+
+.discussion__cta-close {
+  @extend %discussion__tab;
+  &::before {
+    content: url('../img/x.svg');
+  }
+}
+
+
+
+
+
+
+
+
+

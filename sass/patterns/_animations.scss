@@ -1,0 +1,51 @@
+// Placeholders
+
+%batch-expand-animation {
+  @include vp(animation, expand .15s $cubic-in);
+}
+
+%batch-retract-animation {
+  @include vp(animation, retract .12s $cubic-out forwards);
+}
+
+
+// Keyframes
+
+@include keyframes(retract) {
+  0% {
+    opacity: 1;
+    @include vp(transform, translate3d(0, 0, 0));
+  }
+  20% {
+    opacity: 0.2;
+  }
+  50% {
+    height: 50%;
+  }
+  90% {
+    @include vp(transform, translate3d(0, -20%, 0));    
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+@include keyframes(expand) {
+  0% {
+    opacity: 0;
+    @include vp(transform, translate3d(0, -10%, 0));
+  }
+  20% {
+    opacity: 0;
+    height: 80%;    
+  }
+  50% {
+    height: 50%;
+  }
+  100% {
+    opacity: 1;
+    @include vp(transform, translate3d(0, 0, 0));
+    height: auto;
+  }
+}

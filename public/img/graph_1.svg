@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="985px" height="234px" viewBox="0 0 985 234" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+    <title>Path-130 + Path-127</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Path-130-+-Path-127" sketch:type="MSLayerGroup" transform="translate(0.000000, 1.000000)">
+            <path d="M116.609925,232.137047 L243.128204,0.17502891 C243.128204,0.17502891 571.747585,231.965178 771.151289,231.965169" id="Path-130" stroke="#FFF81D" sketch:type="MSShapeGroup"></path>
+            <path d="M0.296929,232.066671 C0.296929,232.066671 105.959974,132.266968 219.574212,112.632811 C333.18845,92.9986544 526.30845,56.6712654 662.656243,117.601558 C799.004036,178.53185 984.09802,232.066674 984.09802,232.066674" id="Path-127" stroke="#FF00AC" stroke-dasharray="5" fill-opacity="0.1" fill="#FF00AC" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

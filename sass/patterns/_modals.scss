@@ -1,0 +1,18 @@
+%modal-cancel {
+  @extend %navigator-action;
+  position: fixed;
+  top: $alpha;
+  right: $alpha;
+}
+
+%modal {
+  max-width: $alpha*10;
+  height: $alpha*8;
+  overflow-y: scroll;
+  margin: auto;  
+  background-color: darken($background_color, 5%);
+  box-shadow: 0 0 20px rgba($background_color, 1);
+  top: 20%;
+  border: 1px solid rgba($highlight_color, 0.3);
+  position: relative;
+}

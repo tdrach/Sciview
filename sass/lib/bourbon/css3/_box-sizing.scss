@@ -1,0 +1,6 @@
+$default-box-sizing: border-box !default;
+
+@mixin box-sizing ($box: $default-box-sizing) {
+//  content-box | border-box | inherit
+  @include prefixer(box-sizing, $box, webkit moz spec);
+}

@@ -1,0 +1,36 @@
+%input-reset {
+  box-shadow: none;
+  background-color: rgba($interface_color, 0.05);
+  border: 1px solid rgba($interface_color, 0.1);
+  padding: $baby $gamma;
+  font-family: $primary_font_family;
+  color: $font_color;
+  font-size: $normal;
+  outline: none;
+
+  &:hover {
+    border: 1px solid rgba($interface_color, 0.5);
+  }
+
+  &:active {
+    outline: none;
+    border: 1px solid rgba($highlight_color, 0.8);
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgba($highlight_color, 0.8);    
+  }
+
+}
+
+%button-reset {
+  @extend %input-reset;
+  @include pad($baby/2 $baby);
+  @include rem(font-size, $baby);
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+}

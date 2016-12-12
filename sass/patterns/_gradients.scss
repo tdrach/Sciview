@@ -1,0 +1,10 @@
+%gradient-1 {
+    background: rgb(14,23,73); /* Old browsers */
+    background: -moz-linear-gradient(45deg,  rgba(14,23,73,1) 0%, rgba(11,17,56,1) 0%, rgba(15,45,84,1) 42%, rgba(54,35,63,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(14,23,73,1)), color-stop(0%,rgba(11,17,56,1)), color-stop(42%,rgba(15,45,84,1)), color-stop(100%,rgba(54,35,63,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  rgba(14,23,73,1) 0%,rgba(11,17,56,1) 0%,rgba(15,45,84,1) 42%,rgba(54,35,63,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  rgba(14,23,73,1) 0%,rgba(11,17,56,1) 0%,rgba(15,45,84,1) 42%,rgba(54,35,63,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  rgba(14,23,73,1) 0%,rgba(11,17,56,1) 0%,rgba(15,45,84,1) 42%,rgba(54,35,63,1) 100%); /* IE10+ */
+    background: linear-gradient(45deg,  rgba(14,23,73,1) 0%,rgba(11,17,56,1) 0%,rgba(15,45,84,1) 42%,rgba(54,35,63,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e1749', endColorstr='#36233f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

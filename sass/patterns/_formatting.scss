@@ -1,0 +1,10 @@
+%ul-reset {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+}
+
+%user-select-none {
+  @include vp(user-select, none);
+}

@@ -1,0 +1,11 @@
+%hover-ready {
+  @include vp(user-select, none);
+  @include vp(transition, opacity .1s ease);
+  opacity: 0.3;
+}
+
+%hover-go {
+  @include vp(transition, opacity .1s ease);
+  opacity: 1;
+  cursor: pointer;
+}

@@ -1,0 +1,34 @@
+<section class="navigator">
+  <section class="navigator__toolbar">
+    <input  class="navigator__search" 
+            type="text"
+            ng-model="navigator.search_query"
+            placeholder="Search">
+    <section class="navigator__toolbar-actions">
+      <button class="navigator__action-custom-data-set">Create Custom Data Set</button>
+      <button class="navigator__action-upload-tdms"
+              ui-sref="navigator.upload">Upload File</button>
+    </section>
+  </section>
+  <section class="navigator__content">
+    <table class="navigator__table">
+      <th class="navigator__table-heading-title" ng-click="value='table'">Title</th>
+      <th class="navigator__table-heading-created">Created</th>
+      <th class="navigator__table-heading-modified">Modified</th>
+      <th class="navigator__table-heading-size">Size</th>
+      <th class="navigator__table-heading-length">Length</th>
+      <th class="navigator__table-heading-info">Info</th>
+      <th class="navigator__table-heading-actions">Actions</th>
+      <tr class="source" ng-repeat="source in sources | filter: navigator.search_query">
+          <td class="source__title" ng-bind="source.title"></td>
+          <td class="source__created" ng-bind="source.created | date:'shortDate'"></td>
+          <td class="source__modified" ng-bind="source.modified | date:'shortDate'"></td>
+          <td class="source__size" ng-bind="source.size"></td>
+          <td class="source__length" ng-bind="source.length"></td>
+          <td class="source__info" ng-bind="source.info"></td>
+          <td class="source__action" ng-bind="source.data_set"></td>
+      </li>
+    </ul>
+  </section>
+</section>
+<section ui-view></section>

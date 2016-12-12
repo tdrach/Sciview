@@ -1,0 +1,5 @@
+%view-layout {
+  @extend span-columns(10);
+  @extend shift(1);
+  height: 32em;
+}

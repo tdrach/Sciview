@@ -1,0 +1,82 @@
+<!-- Modal container -->
+<section class="overlay">
+  
+  <!-- Cancel / Close modal -->
+  <button class="upload__cancel"
+          ui-sref="navigator">Cancel
+  </button>
+  
+  <!-- Upload box-->
+  <section class="upload">
+
+    <!-- Header w/ title and action -->
+    <header class="upload__header">
+      <h1 class="upload__title">Upload<span class="upload__info"> a <i>TDMS</i> or <i>CSV</i> file</span></h1>
+       <div class="upload__header-actions">
+          <button class="upload__action" 
+                  ng-click="choseFile()">Choose File
+          </button>
+        </div>
+    </header>
+
+    <!-- Show null state if empty -->
+    <div class="upload__null"
+          ng-if="uploads.length === 0">
+          <span class="upload__prompt">Drag and Drop, or choose a file</span>
+    </div>
+
+    <!-- List of current uploads -->
+    <ul class="upload__list">
+        <li class="upload__item" ng-repeat="upload in uploads track by $index">
+          <span class="upload__name" ng-bind="upload.name"></span>
+          
+          <!-- Actions on chosen files -->
+          <div class="upload__actions">
+            
+            <!-- File ready -->
+            <div  class="upload__ready"
+                  ng-if="upload.status.upload === false">
+              <button class="upload__begin" 
+                      ng-click="uploadItem(upload)">Upload
+              </button>
+            </div>
+            
+            <!-- File uploading -->
+            <div  class="upload__uploading"
+                  ng-if="upload.status.upload === true">
+              <button class="upload__stop-upload"
+                      ng-click="stopUpload(upload)">
+              </button>
+              <!-- Loading SVG -->
+              <svg class="upload__loading" viewBox="0 0 65 4" >
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="-49" transform="translate(-10.000000, -14.000000)" fill="#00A2CE">
+                        <g transform="translate(10.000000, 14.000000)">
+                            <rect id="Rectangle-23" fill-opacity="0.1" x="0" y="0" width="65" height="4"></rect>
+                            <rect id="Rectangle-24" x="0" y="0" width="3" height="4"> 
+                              <animate  id="animate-load"
+                                        attributeName="width"
+                                        from="3"
+                                        to="65"
+                                        begin="0s"
+                                        dur="1.5s"
+                                        values="3; 20; 30; 60; 65"
+                                        keySplines=".75 .06 .38 .99; .75 .06 .38 .99; .75 .06 .38 .99; .75 .06 .38 .99"
+                                        keyTimes="0; 0.25; 0.5; 0.75; 1"
+                                        calcMode="spline"
+                                        repeatCount="1"
+                                        fill="freeze"/>
+                          </rect>
+                        </g>
+                    </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </li>
+    </ul>
+      <!-- Finish / exit -->
+      <button class="upload__finished"
+          ui-sref="navigator">Finished</button>
+  </section>
+</section>

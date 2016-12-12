@@ -1,0 +1,65 @@
+// Global
+// -- Layout
+
+//    Any semantic class that requires layout styles should be included
+//    in this file, along with layout-only styles.
+
+// Semantic placeholders will prevent repetition of code 
+%full-width {
+  @include span-columns(12);  
+}
+
+%sidebar-width {
+  @include span-columns(3);
+  @include omega;
+}
+
+%chart-width {
+  @include span-columns(9);
+  @include omega;
+}
+
+.data-sets__list {
+  @extend %full-width;
+}
+
+.data-set {
+  @extend %full-width;
+}
+
+.data-set__graphs {
+  @extend %full-width;
+}
+
+.batch {
+  @extend %full-width;
+  height: $alpha*8;
+}
+
+.batch__sidebar {
+  @extend %sidebar-width;
+  overflow-y: scroll;
+}
+
+.batch__chart {
+  @extend %chart-width;
+  height: $alpha*8;
+}
+
+.batch__title {
+  @include span-columns(9);
+}
+
+.batch__title-icon {
+  @include span-columns(1);
+}
+
+.batch__add-channel-action {
+  @include span-columns(1);
+}
+
+.batch__data-item {
+  @include span-columns(12);
+}
+
+

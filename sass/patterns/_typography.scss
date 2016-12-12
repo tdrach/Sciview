@@ -1,0 +1,24 @@
+%monospaced-style {
+  font-family: $mono_font_family;
+  font-size: $normal;
+  font-weight: 400;
+}
+
+%small-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+%icon-font {
+  font-family: 'Sciview';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

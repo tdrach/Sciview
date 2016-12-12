@@ -1,0 +1,84 @@
+// The role of the config sass file is two fold. Adjust !defaults as set in lower level modules
+// and to set theme variables.
+
+// Typically, commented out variables signify a !default setting at a
+// lower level module.
+
+// CSS3 defaults
+// *-------------------------------------------------------------------------------
+$default-box-sizing: border-box;
+
+
+/////// Typography configuration
+// *-------------------------------------------------------------------------------
+$font_size: 16px;
+
+// $kilo: 6.4rem;
+$alpha: 2.56rem;
+$beta: 1.6rem;
+$gamma: 1rem;
+$normal: .8rem;
+$baby: .6rem;
+
+$line: $font_size * 1.5;
+$small_point_size: 10;
+$large_point_size: 14;
+
+$primary_font_family: #{"pt-sans", "Avenir", Helvetica, sans-serif};
+$mono_font_family: #{"fira-mono", Courier, sans-serif};
+
+$spacing_unit: $line;
+
+
+/////// Colors
+// *-------------------------------------------------------------------------------
+
+$interface_style: dark;
+
+@if $interface_style == dark {
+  $font_color: white;
+  $interface_color: white; // White - to be added with transparency
+  $highlight_color: #00A2CE; // Light blue
+  $background_color: #152A56; // Dark blue
+  $notification_color: #FF00E6;
+} @else if $interface_style == light {
+  $font_color: #333; // Dark gray
+  $interface_color: #2DB7DD; // Light blue
+  $background_color: #fafafa; // Light gray
+  $highlight_color: #00A2CE; // Light blue
+}
+
+$white: #fff;
+$color-interface: #0F0F1F;
+$color-semi-white: #616169;
+
+$color-highlight: #FF6757;
+$color-demure: #C9C5C5;
+
+$base: #333;
+$color-bg-light: #FFFDF5;
+$color-bg: #fafafa;
+
+$base-font-color: $base;
+
+/////// @media breakpoint defaults
+// *-------------------------------------------------------------------------------
+$tablet:                    "screen and (max-width: 64em)";
+$tablet_portrait:           "screen and (max-width: 50em) and (orientation: portrait)";
+$tablet_landscape:          "screen and (max-width: 50em) and (orientation: landscape)";
+
+$mobile:                    "screen and (max-width: 30em)";
+$mobile_portrait:           "screen and (max-width: 30em) and (orientation : portrait)";
+$mobile_landscape:          "screen and (max-width: 30em) and (orientation : landscape)";
+
+
+//////// Other
+$z-index-kilo: 2;
+$z-index-alpha: 1;
+$z-index-beta: -1;
+$z-index-neutral: 0;
+
+$list_item_size: $beta;
+
+$cubic-out: cubic-bezier(.94,.09,.7,.95);
+$cubic-in: cubic-bezier(0,.71,.99,.64);

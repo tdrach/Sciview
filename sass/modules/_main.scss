@@ -1,0 +1,7 @@
+.main {
+  @include pad(0.5rem);
+  position: fixed;
+  top: $alpha*2;
+  height: 100%;
+  width: 100%;
+}

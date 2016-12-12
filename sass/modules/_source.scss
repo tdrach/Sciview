@@ -1,0 +1,48 @@
+.source {
+  min-width: 100%;
+  @include span-columns(12);
+  font-family: $mono_font_family;
+  font-size: $normal;
+  padding: $baby 0;
+
+  &:nth-child(odd) {
+    background-color: rgba($white, 0.05);
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $highlight_color;
+    color: $font_color;
+  }
+}
+
+.source__title {
+  @include span-columns(3);
+}
+
+.source__created {
+  @include span-columns(1);
+}
+
+.source__modified {
+  @include span-columns(1);
+}
+
+.source__size {
+  @include span-columns(1);
+}
+
+.source__length {
+  @include span-columns(1);
+}
+
+.source__info {
+  @include span-columns(4);
+}
+
+.source__actions {
+  @include span-columns(1);
+}
+
+
+

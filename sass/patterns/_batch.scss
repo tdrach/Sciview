@@ -1,0 +1,35 @@
+%batch-item-title {
+  font-size: $normal;
+  padding: .5rem $normal;
+}
+
+%batch-icon-mini {
+  @include span-columns(1);
+  &::before {
+    content: '';
+    opacity: 0.5;
+    background-size: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+    display: block; 
+  }
+}
+
+%batch-icon-chevron {
+  @extend %batch-icon-mini;
+  @include vp(transition, transform ease .05s);
+  @include vp(transform-origin, 90% 75%); 
+
+  &::before {
+    position: relative;
+    height: 1.5rem;
+    width: 1.5rem;
+    top: .375rem;
+    left: .45rem;
+  }
+}
+
+%batch-rotate-chevron-1 {
+  @include vp(transform, rotate(-90deg));    
+  @include vp(transform-origin, 90% 75%); 
+}

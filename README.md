@@ -1,5 +1,7 @@
 # Sciview Prototype
 
+You can read the story about this project [here](https://medium.com/@thomasdrach/i-thought-i-was-designing-for-spacex-i-was-actually-designing-for-the-silk-road-4b4b64834868#.795zenezg), and see a live demo [here](http://sciview.herokuapp.com).
+
 ```
 DISCLAIMER
 
